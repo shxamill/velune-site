@@ -1,0 +1,182 @@
+[
+  {
+    "client": "Kinjal Mehtha",
+    "file": "IMG_0257.JPG.jpeg",
+    "type": "image",
+    "width": 2268,
+    "height": 4032,
+    "aspectRatio": "0.563",
+    "orientation": "portrait",
+    "publicPath": "/media/work/kinjal-mehtha/IMG_0257.JPG.jpeg"
+  },
+  {
+    "client": "Kinjal Mehtha",
+    "file": "IMG_0286.MOV",
+    "type": "video",
+    "width": 1080,
+    "height": 1920,
+    "aspectRatio": "0.563",
+    "orientation": "portrait",
+    "publicPath": "/media/work/kinjal-mehtha/IMG_0286.MOV"
+  },
+  {
+    "client": "Kinjal Mehtha",
+    "file": "IMG_3845.PNG",
+    "type": "image",
+    "width": 1170,
+    "height": 2059,
+    "aspectRatio": "0.568",
+    "orientation": "portrait",
+    "publicPath": "/media/work/kinjal-mehtha/IMG_3845.PNG"
+  },
+  {
+    "client": "Kinjal Mehtha",
+    "file": "IMG_3846.MP4",
+    "type": "video",
+    "width": 720,
+    "height": 1280,
+    "aspectRatio": "0.563",
+    "orientation": "portrait",
+    "publicPath": "/media/work/kinjal-mehtha/IMG_3846.MP4"
+  },
+  {
+    "client": "Lakshi Lingaraju",
+    "file": "IMG_1298.JPG.jpeg",
+    "type": "image",
+    "width": 2268,
+    "height": 4032,
+    "aspectRatio": "0.563",
+    "orientation": "portrait",
+    "publicPath": "/media/work/lakshi-lingaraju/IMG_1298.JPG.jpeg"
+  },
+  {
+    "client": "Lakshi Lingaraju",
+    "file": "IMG_3141.MOV",
+    "type": "video",
+    "width": 1080,
+    "height": 1920,
+    "aspectRatio": "0.563",
+    "orientation": "portrait",
+    "publicPath": "/media/work/lakshi-lingaraju/IMG_3141.MOV"
+  },
+  {
+    "client": "Lakshi Lingaraju",
+    "file": "IMG_5845.MP4",
+    "type": "video",
+    "width": 720,
+    "height": 1280,
+    "aspectRatio": "0.563",
+    "orientation": "portrait",
+    "publicPath": "/media/work/lakshi-lingaraju/IMG_5845.MP4"
+  },
+  {
+    "client": "Lakshi Lingaraju",
+    "file": "IMG_5846.PNG",
+    "type": "image",
+    "width": 1206,
+    "height": 2131,
+    "aspectRatio": "0.566",
+    "orientation": "portrait",
+    "publicPath": "/media/work/lakshi-lingaraju/IMG_5846.PNG"
+  },
+  {
+    "client": "Yash Jain",
+    "file": "IMG_5847.MP4",
+    "type": "video",
+    "width": 720,
+    "height": 1280,
+    "aspectRatio": "0.563",
+    "orientation": "portrait",
+    "publicPath": "/media/work/yash-jain/IMG_5847.MP4"
+  },
+  {
+    "client": "Yash Jain",
+    "file": "IMG_5848.PNG",
+    "type": "image",
+    "width": 1206,
+    "height": 2145,
+    "aspectRatio": "0.562",
+    "orientation": "portrait",
+    "publicPath": "/media/work/yash-jain/IMG_5848.PNG"
+  },
+  {
+    "client": "Stilat",
+    "file": "IMG_3629.MOV",
+    "type": "video",
+    "width": 1080,
+    "height": 1920,
+    "aspectRatio": "0.563",
+    "orientation": "portrait",
+    "publicPath": "/media/work/stilat/IMG_3629.MOV"
+  },
+  {
+    "client": "Stilat",
+    "file": "IMG_5849.MOV",
+    "type": "video",
+    "width": 1080,
+    "height": 1920,
+    "aspectRatio": "0.563",
+    "orientation": "portrait",
+    "publicPath": "/media/work/stilat/IMG_5849.MOV"
+  },
+  {
+    "client": "Stilat",
+    "file": "IMG_5851.JPG.jpeg",
+    "type": "image",
+    "width": 2268,
+    "height": 4032,
+    "aspectRatio": "0.563",
+    "orientation": "portrait",
+    "publicPath": "/media/work/stilat/IMG_5851.JPG.jpeg"
+  },
+  {
+    "client": "Stilat",
+    "file": "IMG_5852.JPG.jpeg",
+    "type": "image",
+    "width": 1206,
+    "height": 2131,
+    "aspectRatio": "0.566",
+    "orientation": "portrait",
+    "publicPath": "/media/work/stilat/IMG_5852.JPG.jpeg"
+  },
+  {
+    "client": "PL Edits",
+    "file": "IMG_3755.MOV",
+    "type": "video",
+    "width": 1080,
+    "height": 1920,
+    "aspectRatio": "0.563",
+    "orientation": "portrait",
+    "publicPath": "/media/work/pl-edit/IMG_3755.MOV"
+  },
+  {
+    "client": "PL Edits",
+    "file": "IMG_5853.MP4",
+    "type": "video",
+    "width": 720,
+    "height": 1280,
+    "aspectRatio": "0.563",
+    "orientation": "portrait",
+    "publicPath": "/media/work/pl-edit/IMG_5853.MP4"
+  },
+  {
+    "client": "PL Edits",
+    "file": "IMG_5854.JPG.jpeg",
+    "type": "image",
+    "width": 2268,
+    "height": 4032,
+    "aspectRatio": "0.563",
+    "orientation": "portrait",
+    "publicPath": "/media/work/pl-edit/IMG_5854.JPG.jpeg"
+  },
+  {
+    "client": "PL Edits",
+    "file": "IMG_5855.PNG",
+    "type": "image",
+    "width": 1206,
+    "height": 2139,
+    "aspectRatio": "0.564",
+    "orientation": "portrait",
+    "publicPath": "/media/work/pl-edit/IMG_5855.PNG"
+  }
+]

@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+:root {
+  /* --- HERO SYSTEM TOKENS --- */
+  --hero-canvas-porcelain: #FBFBFA;
+  --hero-surface-cream: #F7F6F3;
+  --hero-surface-elevated: #FFFFFF;
+  --hero-text-charcoal: #141413;
+  --hero-text-espresso: #4A4844;
+  --hero-border-subtle: #EAE8E3;
+
+  /* --- FULL-SITE SYSTEM TOKENS --- */
+  --site-primary: #000000;
+  --site-neutral: #FFFFFF;
+  --site-secondary: #737373;
+  --site-subtle-line: #E5E5E5;
+  --site-dark-line: #1A1A1A;
+
+  /* Base Application Defaults */
+  --background: var(--hero-canvas-porcelain);
+  --foreground: var(--hero-text-charcoal);
+}
+
+@theme inline {
+  --color-canvas-porcelain: var(--hero-canvas-porcelain);
+  --color-surface-cream: var(--hero-surface-cream);
+  --color-surface-elevated: var(--hero-surface-elevated);
+  --color-text-charcoal: var(--hero-text-charcoal);
+  --color-text-espresso: var(--hero-text-espresso);
+  --color-border-subtle: var(--hero-border-subtle);
+  
+  --color-text-muted: #8A8780;
+  --color-on-surface-variant: #464742;
+  --color-secondary-container: #e6e2dc;
+  --color-outline-variant: #c7c7c0;
+
+  --color-site-primary: var(--site-primary);
+  --color-site-neutral: var(--site-neutral);
+  --color-site-secondary: var(--site-secondary);
+  --color-site-subtle: var(--site-subtle-line);
+  --color-site-dark: var(--site-dark-line);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Fonts injected via next/font */
+  --font-newsreader: var(--font-newsreader);
+  --font-geist: var(--font-geist-sans);
+  --font-anton: var(--font-anton);
+  --font-space-mono: var(--font-space-mono);
+
+  /* Font Families from Stitch */
+  --font-display-hero: var(--font-newsreader);
+  --font-headline-lg: var(--font-newsreader);
+  --font-body-lead: var(--font-geist);
+  --font-body-md: var(--font-geist);
+  --font-body-sm: var(--font-geist);
+  --font-label-caps: var(--font-geist);
+
+  /* Font Sizes from Stitch */
+  --text-display-hero: 80px;
+  --text-display-hero--line-height: 88px;
+  --text-display-hero--letter-spacing: -0.025em;
+
+  --text-display-hero-mobile: 42px;
+  --text-display-hero-mobile--line-height: 48px;
+  --text-display-hero-mobile--letter-spacing: -0.02em;
+
+  --text-headline-lg: 48px;
+  --text-headline-lg--line-height: 56px;
+  --text-headline-lg--letter-spacing: -0.02em;
+
+  --text-body-lead: 18px;
+  --text-body-lead--line-height: 28px;
+  --text-body-lead--letter-spacing: -0.01em;
+
+  --text-body-md: 15px;
+  --text-body-md--line-height: 24px;
+  --text-body-md--letter-spacing: -0.005em;
+
+  --text-body-sm: 13px;
+  --text-body-sm--line-height: 20px;
+  --text-body-sm--letter-spacing: 0em;
+
+  --text-label-caps: 11px;
+  --text-label-caps--line-height: 14px;
+  --text-label-caps--letter-spacing: 0.08em;
+
+  /* Spacing */
+  --spacing-margin-mobile: 1.25rem;
+  --spacing-gutter-mobile: 1rem;
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-md: 1rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-space-lg: 2rem;
+  --spacing-margin: 4rem;
+  --spacing-space-xl: 4rem;
+  --spacing-space-2xl: 6rem;
+}
+
+/* Base Normalization */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+}

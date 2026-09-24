@@ -102,6 +102,14 @@ export function Preloader({ onComplete }: PreloaderProps) {
 
     const triggerExit = () => {
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      
+      // EXPLICIT INITIAL STATE FOR HERO AS REQUESTED
+      gsap.set('.orbit-item-1 .orbit-item-inner, .orbit-item-3 .orbit-item-inner, .orbit-item-5 .orbit-item-inner', { x: -60, opacity: 0 });
+      gsap.set('.orbit-item-2 .orbit-item-inner, .orbit-item-4 .orbit-item-inner', { x: 60, opacity: 0 });
+      gsap.set('.orbit-focal', { y: 30, opacity: 0 });
+      gsap.set('.hero-typography-inner', { y: 15, opacity: 0 });
+      gsap.set('header', { opacity: 0 });
+
       const tl = gsap.timeline({
         onComplete: () => {
           if (onComplete) onComplete();
@@ -117,45 +125,43 @@ export function Preloader({ onComplete }: PreloaderProps) {
           'header'
         ], { opacity: 1, duration: 1 }, '<');
       } else {
-        // Step 1: Number gently disappears
+        // ~3.0s: Progress reaches 100. Hold approximately 100-150ms.
+        tl.to({}, { duration: 0.15 });
+
+        // ~3.15s - 3.5s: Fade OUT the progress number.
         tl.to(numRef.current, { opacity: 0, duration: 0.35, ease: 'power3.out' });
 
-        // Step 2: VEL + UNE smoothly reunite
-        tl.to(numRef.current, { width: 0, margin: 0, padding: 0, duration: 0.45, ease: 'power3.out' });
+        // ~3.5s - 3.95s: Reunite the wordmark.
+        tl.to(numRef.current, { width: 0, margin: 0, padding: 0, duration: 0.45, ease: 'power3.inOut' });
 
-        // Step 3: Wordmark scales down/fades
-        tl.to(wordmarkRef.current, { scale: 0.9, opacity: 0, duration: 0.5, ease: 'power3.out' }, '+=0.2');
+        // ~3.95s - 4.45s: Animate reunited VELUNE scale/fade.
+        tl.to(wordmarkRef.current, { scale: 0.9, opacity: 0, duration: 0.5, ease: 'power3.out' });
         
-        // Fade out preloader background
-        tl.to(containerRef.current, { opacity: 0, duration: 0.6, ease: 'power2.inOut', pointerEvents: 'none' }, '<0.1');
+        // ~4.15s: NOW begin the actual Hero reveal. (Overlap by 0.3s)
+        const revealStartTime = '-=0.3';
 
-        // Restore header
-        tl.to('header', { opacity: 1, duration: 0.8, ease: 'power2.inOut' }, '<0.2');
+        // Loader background fades from opaque to transparent
+        tl.to(containerRef.current, { opacity: 0, duration: 0.8, ease: 'power2.inOut', pointerEvents: 'none' }, revealStartTime);
 
-        // Step 4: Hero media reveal
-        tl.fromTo('.orbit-item-1 .orbit-item-inner, .orbit-item-3 .orbit-item-inner, .orbit-item-5 .orbit-item-inner',
-          { x: -60, opacity: 0 },
-          { x: 0, opacity: 1, duration: 1.2, ease: 'power3.out', stagger: 0.1 },
-          '-=0.2'
+        // AT THE SAME TIME, animate the Hero underneath it:
+        tl.to('.orbit-item-1 .orbit-item-inner, .orbit-item-3 .orbit-item-inner, .orbit-item-5 .orbit-item-inner',
+          { x: 0, opacity: 1, duration: 1.2, ease: 'power3.out', stagger: 0.05 }, revealStartTime
         );
 
-        tl.fromTo('.orbit-item-2 .orbit-item-inner, .orbit-item-4 .orbit-item-inner',
-          { x: 60, opacity: 0 },
-          { x: 0, opacity: 1, duration: 1.2, ease: 'power3.out', stagger: 0.1 },
-          '<'
+        tl.to('.orbit-item-2 .orbit-item-inner, .orbit-item-4 .orbit-item-inner',
+          { x: 0, opacity: 1, duration: 1.2, ease: 'power3.out', stagger: 0.05 }, revealStartTime
         );
 
-        tl.fromTo('.orbit-focal',
-          { y: 30, opacity: 0 },
-          { y: 0, opacity: 1, duration: 1.2, ease: 'power3.out' },
-          '<'
+        tl.to('.orbit-focal',
+          { y: 0, opacity: 1, duration: 1.2, ease: 'power3.out' }, revealStartTime
         );
 
-        // Step 5: Hero typography fades upward
-        tl.fromTo('.hero-typography-inner',
-          { y: 15, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.9, ease: 'power3.out' },
-          '-=0.8'
+        tl.to('header',
+          { opacity: 1, duration: 0.8, ease: 'power2.inOut' }, revealStartTime
+        );
+
+        tl.to('.hero-typography-inner',
+          { y: 0, opacity: 1, duration: 0.9, ease: 'power3.out' }, revealStartTime
         );
       }
     };

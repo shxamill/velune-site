@@ -1,12 +1,12 @@
 export function ManifestoSection() {
   return (
-    <section className="relative w-full py-24 lg:py-32 flex flex-col justify-center z-10">
+    <section className="relative w-full py-24 lg:py-32 flex flex-col justify-center z-content">
       <div className="max-w-4xl mx-auto flex flex-col gap-12 lg:gap-16 px-margin-mobile md:px-margin">
         
         {/* Eyebrow */}
         <div className="flex items-center gap-4">
           <span className="w-8 h-[1px] bg-text-muted"></span>
-          <span className="font-label-caps text-label-caps tracking-[0.2em] text-text-muted uppercase">
+          <span className="font-label-caps text-eyebrow tracking-eyebrow text-text-muted uppercase">
             Manifesto & Perspective
           </span>
         </div>
@@ -27,10 +27,10 @@ export function ManifestoSection() {
             &ldquo;We believe great creative work isn&rsquo;t just about looking good&mdash;it&rsquo;s about making people stop, feel, and remember.&rdquo;
           </p>
           <div className="mt-6 flex items-center justify-between">
-            <span className="font-label-caps text-[10px] tracking-[0.2em] uppercase text-text-muted">
+            <span className="font-label-caps text-eyebrow tracking-eyebrow text-text-muted uppercase">
               Principles of Presence
             </span>
-            <span className="font-label-caps text-[10px] tracking-widest text-text-muted uppercase">
+            <span className="font-label-caps text-eyebrow tracking-eyebrow text-text-muted uppercase">
               Velune / Core Ethos
             </span>
           </div>

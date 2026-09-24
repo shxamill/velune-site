@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { geist } from '@/lib/fonts';
+import { geist, newsreader, anton, spaceMono } from '@/lib/fonts';
 import '@/styles/globals.css';
 import { SmoothScrolling } from '@/components/common/SmoothScrolling';
 
@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geist.variable} antialiased`}>
+      <body className={`${geist.variable} ${newsreader.variable} ${anton.variable} ${spaceMono.variable} antialiased`}>
         <SmoothScrolling>
           {children}
         </SmoothScrolling>

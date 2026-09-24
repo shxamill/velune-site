@@ -113,7 +113,7 @@ export function ServicesSection() {
       <div className="flex flex-col gap-16">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6">
           <div>
-            <span className="services-header-anim font-label-sm text-label-sm uppercase tracking-[0.24em] text-ink-muted block mb-2">
+            <span className="services-header-anim font-label-caps text-eyebrow tracking-eyebrow text-ink-muted uppercase block mb-2">
               Capabilities & Disciplines
             </span>
             <h3 className="services-header-anim font-display-md text-display-md lg:text-display-lg text-primary tracking-tight font-light uppercase">
@@ -139,7 +139,7 @@ export function ServicesSection() {
                   aria-expanded={isActive}
                 >
                   <div className="flex items-start justify-between gap-4 w-full">
-                    <span className="font-label-sm text-label-sm uppercase tracking-[0.2em] text-ink-muted mt-2 shrink-0">
+                    <span className="font-label-caps text-eyebrow tracking-eyebrow text-ink-muted uppercase mt-2 shrink-0">
                       {service.id}
                     </span>
                     <div className="flex-1 min-w-0">

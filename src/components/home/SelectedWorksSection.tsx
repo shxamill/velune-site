@@ -38,7 +38,7 @@ function ClientHeader({ index, client, services }: { index: string; client: stri
   return (
     <header className="client-header mb-12 lg:mb-16 flex flex-col md:flex-row justify-between items-start md:items-end gap-6 border-b border-border-subtle pb-6">
       <div>
-        <p className="text-label-sm lg:text-label-md text-ink-muted tracking-widest uppercase mb-3">
+        <p className="font-label-caps text-eyebrow tracking-eyebrow text-ink-muted uppercase mb-3">
           {index}
         </p>
         <h3 className="text-headline-sm lg:text-headline-md font-serif uppercase tracking-tight text-on-surface">
@@ -58,7 +58,7 @@ function ClientHeader({ index, client, services }: { index: string; client: stri
 function AnchorAndCluster({ assets }: { assets: MediaProps[] }) {
   return (
     <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-start justify-center">
-      <div className="shrink-0 z-10 media-wrapper" data-speed="0.9" data-dir="center">
+      <div className="shrink-0 z-content media-wrapper" data-speed="0.9" data-dir="center">
         <Media {...assets[0]} sizeClass="w-auto h-auto max-h-[60svh] md:max-h-[68svh] lg:max-h-[72svh] object-contain block" />
       </div>
       <div className="flex flex-col sm:flex-row lg:flex-col gap-6 lg:gap-10 shrink-0 lg:mt-12">
@@ -90,7 +90,7 @@ function CenterFlanked({ assets }: { assets: MediaProps[] }) {
           <Media {...assets[2]} sizeClass="w-auto h-auto max-h-[25svh] object-contain block" />
         </div>
       </div>
-      <div className="shrink-0 z-10 media-wrapper" data-speed="1.0" data-dir="center">
+      <div className="shrink-0 z-content media-wrapper" data-speed="1.0" data-dir="center">
         <Media {...assets[0]} sizeClass="w-auto h-auto max-h-[60svh] md:max-h-[68svh] lg:max-h-[72svh] object-contain block" />
       </div>
       <div className="flex lg:hidden gap-6 w-full justify-center">
@@ -129,7 +129,7 @@ function DenseGrid({ assets }: { assets: MediaProps[] }) {
       <div className="shrink-0 md:mt-16 media-wrapper" data-speed="-0.85" data-dir="left">
         <Media {...assets[0]} sizeClass="w-auto h-auto max-h-[45svh] lg:max-h-[50svh] object-contain block" />
       </div>
-      <div className="shrink-0 md:mt-4 z-10 media-wrapper" data-speed="1.0" data-delay="0.1" data-dir="center">
+      <div className="shrink-0 md:mt-4 z-content media-wrapper" data-speed="1.0" data-delay="0.1" data-dir="center">
         <Media {...assets[1]} sizeClass="w-auto h-auto max-h-[60svh] lg:max-h-[68svh] object-contain block" />
       </div>
       <div className="shrink-0 md:mt-32 media-wrapper" data-speed="-1.15" data-delay="0.2" data-dir="right">
@@ -154,7 +154,7 @@ function AsymmetricCollage({ assets }: { assets: MediaProps[] }) {
           <Media {...assets[2]} sizeClass="w-auto h-auto max-h-[45svh] lg:max-h-[52svh] object-contain block" />
         </div>
       </div>
-      <div className="shrink-0 z-10 media-wrapper" data-speed="1.05" data-dir="center">
+      <div className="shrink-0 z-content media-wrapper" data-speed="1.05" data-dir="center">
         <Media {...assets[0]} sizeClass="w-auto h-auto max-h-[60svh] md:max-h-[68svh] lg:max-h-[70svh] object-contain block" />
       </div>
       <div className="shrink-0 hidden lg:block lg:mt-12 media-wrapper" data-speed="-1.3" data-delay="0.2" data-dir="right">
@@ -281,14 +281,14 @@ export function SelectedWorksSection() {
     <section ref={sectionRef} id="selected-works" className="relative py-24 md:py-32 lg:py-48 px-4 sm:px-6 lg:px-8 max-w-[1920px] mx-auto overflow-hidden">
       <div className="client-header mb-20 lg:mb-32 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6">
         <div>
-          <h2 className="text-label-sm lg:text-label-md text-ink-muted tracking-widest uppercase mb-4">
+          <h2 className="font-label-caps text-eyebrow tracking-eyebrow text-ink-muted uppercase mb-4">
             Portfolio Directory
           </h2>
           <p className="text-display-md-mobile md:text-display-md lg:text-display-lg font-serif uppercase tracking-tight text-on-surface">
             Selected Works
           </p>
         </div>
-        <div className="flex gap-8 text-label-sm lg:text-label-md uppercase tracking-widest text-ink-muted">
+        <div className="flex gap-8 font-label-caps text-eyebrow tracking-eyebrow text-ink-muted uppercase">
           <span>FEATURED CLIENTS</span>
         </div>
       </div>

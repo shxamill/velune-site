@@ -38,7 +38,7 @@ export function LetsTalkSection() {
     <>
       <section ref={sectionRef} id="contact" className="w-full py-24 md:py-32 lg:py-40 flex flex-col items-center text-center px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl flex flex-col items-center gap-6">
-          <span className="cta-anim-item font-label-sm text-label-sm uppercase tracking-[0.28em] text-ink-muted">
+          <span className="cta-anim-item font-label-caps text-eyebrow tracking-eyebrow text-ink-muted uppercase">
             INQUIRIES
           </span>
           
@@ -83,7 +83,7 @@ export function LetsTalkSection() {
 
       {/* EDITORIAL SUB-FOOTER NOTE */}
       <footer className="w-full py-8 px-4 sm:px-6 lg:px-8 border-t border-border-subtle/50">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 font-label-sm text-label-sm uppercase tracking-[0.2em] text-ink-muted text-center sm:text-left">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 font-label-caps text-eyebrow tracking-eyebrow text-ink-muted uppercase text-center sm:text-left">
           <div>
             <span>VELUNE CREATIVE STUDIO</span>
           </div>

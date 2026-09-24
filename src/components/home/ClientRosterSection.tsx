@@ -52,10 +52,10 @@ export function ClientRosterSection() {
         
         {/* Header */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <span className="font-label-sm text-label-sm uppercase tracking-[0.24em] text-ink-muted">
+          <span className="font-label-caps text-eyebrow tracking-eyebrow text-ink-muted uppercase">
             Client Roster / Collaborations
           </span>
-          <span className="font-label-sm text-label-sm tracking-[0.24em] text-ink-muted uppercase">
+          <span className="font-label-caps text-eyebrow tracking-eyebrow text-ink-muted uppercase">
             Brands & Creators
           </span>
         </div>
@@ -90,7 +90,7 @@ export function ClientRosterSection() {
         </div>
 
         {/* Footer */}
-        <p className="font-label-sm text-label-sm text-ink-muted uppercase tracking-[0.16em]">
+        <p className="font-label-caps text-eyebrow tracking-eyebrow text-ink-muted uppercase">
           Every partnership is treated as an independent creative monograph.
         </p>
 

@@ -92,11 +92,11 @@ export function HeroNavigation() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full z-50 bg-transparent">
+      <header className="fixed top-0 left-0 w-full z-header bg-transparent">
         <div className="h-20 w-full px-4 sm:px-6 md:px-margin flex items-center justify-between pointer-events-none">
           <a 
             href="#" 
-            className={`font-label-caps text-label-sm md:text-label-caps tracking-[0.25em] uppercase transition-colors pointer-events-auto ${isOpen ? 'text-on-primary' : 'text-primary'}`}
+            className={`font-label-caps text-eyebrow tracking-eyebrow uppercase transition-colors pointer-events-auto ${isOpen ? 'text-on-primary' : 'text-primary'}`}
             onClick={() => setIsOpen(false)}
           >
             VELUNE
@@ -105,7 +105,7 @@ export function HeroNavigation() {
             <button 
               onClick={toggleMenu}
               aria-expanded={isOpen}
-              className={`font-label-caps text-label-sm md:text-label-caps tracking-[0.2em] uppercase transition-colors pointer-events-auto outline-none focus-visible:ring-2 focus-visible:ring-offset-2 px-4 py-2 ${isOpen ? 'text-on-primary focus-visible:ring-on-primary' : 'text-primary focus-visible:ring-primary'}`}
+              className={`font-label-caps text-eyebrow tracking-eyebrow uppercase transition-colors pointer-events-auto outline-none focus-visible:ring-2 focus-visible:ring-offset-2 px-4 py-2 ${isOpen ? 'text-on-primary focus-visible:ring-on-primary' : 'text-primary focus-visible:ring-primary'}`}
             >
               {isOpen ? 'CLOSE' : 'MENU'}
             </button>
@@ -116,7 +116,7 @@ export function HeroNavigation() {
       {/* Fullscreen Overlay */}
       <div 
         ref={overlayRef}
-        className="fixed inset-0 z-40 bg-primary hidden flex-col justify-center px-4 sm:px-6 md:px-margin"
+        className="fixed inset-0 z-overlay bg-primary hidden flex-col justify-center px-4 sm:px-6 md:px-margin"
         style={{ opacity: 0 }}
         role="dialog"
         aria-modal="true"

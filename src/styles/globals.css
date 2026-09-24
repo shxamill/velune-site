@@ -29,7 +29,7 @@
   --color-text-espresso: var(--hero-text-espresso);
   --color-border-subtle: var(--hero-border-subtle);
   
-  --color-text-muted: #8A8780;
+  --color-text-muted: #5C5A55; /* WCAG AA Contrast Fix (was #8A8780) */
   --color-on-surface-variant: #464742;
   --color-secondary-container: #e6e2dc;
   --color-outline-variant: #c7c7c0;
@@ -42,6 +42,17 @@
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  /* ALIASES FOR UNDEFINED TAILWIND CLASSES (from Audit 1.8) */
+  --color-surface: var(--hero-surface-cream);
+  --color-on-surface: var(--hero-text-charcoal);
+  --color-primary: var(--site-primary);
+  --color-on-primary: var(--site-neutral);
+  --color-secondary: var(--site-secondary);
+  --color-ink-muted: var(--color-text-muted);
+  --color-surface-container: var(--color-secondary-container);
+  --color-surface-container-high: var(--hero-border-subtle);
+  --color-inverse-surface: var(--hero-text-charcoal);
 
   /* Fonts injected via next/font */
   --font-newsreader: var(--font-newsreader);
@@ -56,6 +67,13 @@
   --font-body-md: var(--font-geist);
   --font-body-sm: var(--font-geist);
   --font-label-caps: var(--font-geist);
+
+  /* Font Family Aliases */
+  --font-display: var(--font-newsreader);
+  --font-body: var(--font-geist);
+  --font-headline-sm: var(--font-newsreader);
+  --font-label-sm: var(--font-geist);
+  --font-label-md: var(--font-geist);
 
   /* Font Sizes from Stitch */
   --text-display-hero: 80px;
@@ -86,6 +104,30 @@
   --text-label-caps--line-height: 14px;
   --text-label-caps--letter-spacing: 0.08em;
 
+  /* Font Size Aliases */
+  --text-headline-sm: 24px;
+  --text-headline-sm--line-height: 32px;
+  
+  --text-headline-md: 32px;
+  --text-headline-md--line-height: 40px;
+
+  --text-display-md-mobile: 48px;
+  --text-display-md: 64px;
+  --text-display-lg: 72px;
+
+  --text-label-sm: 11px;
+  --text-label-sm--line-height: 14px;
+  --text-label-sm--letter-spacing: 0.08em;
+  
+  --text-label-md: 13px;
+  --text-label-md--line-height: 16px;
+  --text-label-md--letter-spacing: 0.08em;
+  
+  /* Eyebrow Unified System */
+  --text-eyebrow: 11px;
+  --text-eyebrow--line-height: 14px;
+  --tracking-eyebrow: 0.24em;
+
   /* Spacing */
   --spacing-margin-mobile: 1.25rem;
   --spacing-gutter-mobile: 1rem;
@@ -97,6 +139,14 @@
   --spacing-margin: 4rem;
   --spacing-space-xl: 4rem;
   --spacing-space-2xl: 6rem;
+  
+  /* Z-Index Semantic Scale */
+  --z-floor: 0;
+  --z-content: 10;
+  --z-elevated: 20;
+  --z-overlay: 40;
+  --z-header: 50;
+  --z-max: 9999;
 }
 
 /* Base Normalization */
@@ -129,4 +179,10 @@ button {
   all: unset;
   box-sizing: border-box;
   cursor: pointer;
+}
+
+/* Global Focus Outline Rule */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }

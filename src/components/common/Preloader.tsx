@@ -138,30 +138,31 @@ export function Preloader({ onComplete }: PreloaderProps) {
         tl.to(wordmarkRef.current, { scale: 0.9, opacity: 0, duration: 0.5, ease: 'power3.out' });
         
         // ~4.15s: NOW begin the actual Hero reveal. (Overlap by 0.3s)
-        const revealStartTime = '-=0.3';
+        tl.add('reveal', '-=0.3');
 
         // Loader background fades from opaque to transparent
-        tl.to(containerRef.current, { opacity: 0, duration: 0.8, ease: 'power2.inOut', pointerEvents: 'none' }, revealStartTime);
+        tl.to(containerRef.current, { opacity: 0, duration: 0.8, ease: 'power2.inOut', pointerEvents: 'none' }, 'reveal');
 
         // AT THE SAME TIME, animate the Hero underneath it:
         tl.to('.orbit-item-1 .orbit-item-inner, .orbit-item-3 .orbit-item-inner, .orbit-item-5 .orbit-item-inner',
-          { x: 0, opacity: 1, duration: 1.2, ease: 'power3.out', stagger: 0.05 }, revealStartTime
+          { x: 0, opacity: 1, duration: 1.2, ease: 'power3.out', stagger: 0.05 }, 'reveal'
         );
 
         tl.to('.orbit-item-2 .orbit-item-inner, .orbit-item-4 .orbit-item-inner',
-          { x: 0, opacity: 1, duration: 1.2, ease: 'power3.out', stagger: 0.05 }, revealStartTime
+          { x: 0, opacity: 1, duration: 1.2, ease: 'power3.out', stagger: 0.05 }, 'reveal'
         );
 
+        // Preserve original transforms for focal by not overwriting x/y unless we use explicit transforms or clearProps
         tl.to('.orbit-focal',
-          { y: 0, opacity: 1, duration: 1.2, ease: 'power3.out' }, revealStartTime
+          { y: 0, opacity: 1, duration: 1.2, ease: 'power3.out' }, 'reveal'
         );
 
         tl.to('header',
-          { opacity: 1, duration: 0.8, ease: 'power2.inOut' }, revealStartTime
+          { opacity: 1, duration: 0.8, ease: 'power2.inOut' }, 'reveal'
         );
 
         tl.to('.hero-typography-inner',
-          { y: 0, opacity: 1, duration: 0.9, ease: 'power3.out' }, revealStartTime
+          { y: 0, opacity: 1, duration: 0.9, ease: 'power3.out' }, 'reveal'
         );
       }
     };
@@ -175,7 +176,7 @@ export function Preloader({ onComplete }: PreloaderProps) {
   return (
     <div 
       ref={containerRef}
-      className="fixed inset-0 z-max w-full h-[100dvh] bg-canvas-porcelain flex items-center justify-center"
+      className="fixed inset-0 z-[9999] w-full h-[100dvh] bg-canvas-porcelain flex items-center justify-center"
     >
       <div 
         ref={wordmarkRef}

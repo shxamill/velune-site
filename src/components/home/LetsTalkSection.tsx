@@ -53,7 +53,8 @@ export function LetsTalkSection() {
           {/* Primary Action Targets: WhatsApp & Instagram */}
           <div className="cta-anim-item flex flex-col sm:flex-row items-center justify-center gap-4 pt-6 w-full sm:w-auto">
             <a 
-              className="inline-flex w-full sm:w-auto justify-center items-center gap-3 px-8 py-4 rounded-full bg-primary text-on-primary hover:bg-inverse-surface transition-all shadow-md font-label-md text-label-md uppercase tracking-[0.16em] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2" 
+              className="inline-flex w-full sm:w-auto justify-center items-center gap-3 px-8 py-4 rounded-full bg-primary hover:bg-inverse-surface transition-all shadow-md font-label-md text-label-md uppercase tracking-[0.16em] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2" 
+              style={{ color: '#FFFFFF' }}
               href="https://wa.me/6235348787" 
               rel="noopener noreferrer" 
               target="_blank"

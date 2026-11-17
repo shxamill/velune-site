@@ -1,0 +1,22 @@
+name: Feature request
+description: Suggest an improvement to the website.
+title: "[Feature]: "
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: What user need does this address?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+    validations:
+      required: true
+  - type: textarea
+    id: tradeoffs
+    attributes:
+      label: Accessibility, performance, or brand considerations
+    validations:
+      required: false
